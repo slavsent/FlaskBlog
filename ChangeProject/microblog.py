@@ -1,6 +1,8 @@
-from FlaskBlog.app import app, db
-from FlaskBlog.app.models import User, Post
+from FlaskBlog.ChangeProject.app import create_app, db
+from FlaskBlog.ChangeProject.app.models import User, Post
 
+
+app = create_app()
 
 
 @app.shell_context_processor
