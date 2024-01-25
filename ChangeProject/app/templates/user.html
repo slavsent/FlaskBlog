@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+
     <table class="table table-hover">
         <tr>
             <td width="256px"><img src="{{ user.avatar(256) }}"></td>
@@ -20,6 +21,16 @@
 
                 {% if user == current_user %}
                 <p><a href="{{ url_for('main.edit_profile') }}">Edit your profile</a></p>
+
+                {% if not current_user.get_task_in_progress('export_posts') %}
+                <p>
+                    <a href="{{ url_for('main.export_posts') }}">
+                        {{ ('Export your posts') }}
+                    </a>
+                </p>
+
+                {% endif %}
+
                 {% elif not current_user.is_following(user) %}
                 <p>
                     <form action="{{ url_for('main.follow', username=user.username) }}" method="post">
