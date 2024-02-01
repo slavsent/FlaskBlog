@@ -1,20 +1,7 @@
-2024-01-15 14:03:25,846 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\app\__init__.py:44]
-2024-01-15 14:03:37,570 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\app\__init__.py:44]
-2024-01-15 14:16:20,054 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\app\__init__.py:44]
-2024-01-15 14:17:55,116 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\app\__init__.py:44]
-2024-01-15 14:19:06,022 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\app\__init__.py:44]
-2024-01-15 14:21:56,548 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\app\__init__.py:44]
-2024-01-15 14:23:00,394 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\app\__init__.py:44]
-2024-01-15 14:23:58,623 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\app\__init__.py:44]
-2024-01-15 14:25:57,343 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\app\__init__.py:44]
-2024-01-15 14:26:33,907 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\app\__init__.py:44]
-2024-01-15 14:34:48,696 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\app\__init__.py:44]
-2024-01-15 14:36:47,000 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\app\__init__.py:44]
-2024-01-15 14:42:28,205 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\app\__init__.py:44]
-2024-01-15 14:43:55,303 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\app\__init__.py:44]
-2024-01-15 16:59:20,906 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\app\__init__.py:44]
-2024-01-15 17:21:08,793 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\app\__init__.py:44]
-2024-01-15 17:21:14,397 ERROR: Exception on /explore [GET] [in C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py:825]
+2024-01-25 14:30:19,393 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\FlaskBlog\ChangeProject\app\__init__.py:72]
+2024-01-25 14:30:32,430 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\FlaskBlog\ChangeProject\app\__init__.py:72]
+2024-01-25 14:44:47,142 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\FlaskBlog\ChangeProject\app\__init__.py:72]
+2024-01-25 14:45:09,686 ERROR: Exception on /messages [GET] [in C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py:825]
 Traceback (most recent call last):
   File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py", line 1455, in wsgi_app
     response = self.full_dispatch_request()
@@ -26,10 +13,10 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
   File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
-  File "C:\Users\user\PycharmProjects\MyFlaskProject\app\routes.py", line 168, in explore
-    posts = Post.query.order_by(Post.timestamp.desc()).paginate(
+  File "C:\Users\user\PycharmProjects\MyFlaskProject\FlaskBlog\ChangeProject\app\main\routes.py", line 196, in messages
+    Message.timestamp.desc()).paginate(
 TypeError: Query.paginate() takes 1 positional argument but 4 were given
-2024-01-15 17:21:17,627 ERROR: Exception on /index [GET] [in C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py:825]
+2024-01-25 14:49:47,317 ERROR: Exception on /messages [GET] [in C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py:825]
 Traceback (most recent call last):
   File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py", line 1455, in wsgi_app
     response = self.full_dispatch_request()
@@ -41,10 +28,15 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
   File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
-  File "C:\Users\user\PycharmProjects\MyFlaskProject\app\routes.py", line 38, in index
-    posts = current_user.followed_posts().paginate(
+  File "C:\Users\user\PycharmProjects\MyFlaskProject\FlaskBlog\ChangeProject\app\main\routes.py", line 196, in messages
+    Message.timestamp.desc()).paginate(
 TypeError: Query.paginate() takes 1 positional argument but 4 were given
-2024-01-15 17:21:19,375 ERROR: Exception on /explore [GET] [in C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py:825]
+2024-01-25 14:50:02,800 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\FlaskBlog\ChangeProject\app\__init__.py:72]
+2024-01-25 14:51:14,068 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\FlaskBlog\ChangeProject\app\__init__.py:72]
+2024-01-25 17:16:39,672 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\FlaskBlog\ChangeProject\app\__init__.py:72]
+2024-01-25 17:16:54,033 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\FlaskBlog\ChangeProject\app\__init__.py:72]
+2024-01-25 18:28:16,059 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\FlaskBlog\ChangeProject\app\__init__.py:77]
+2024-01-25 18:28:34,050 ERROR: Exception on /user/oly [GET] [in C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py:825]
 Traceback (most recent call last):
   File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py", line 1455, in wsgi_app
     response = self.full_dispatch_request()
@@ -56,42 +48,7 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
   File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
-  File "C:\Users\user\PycharmProjects\MyFlaskProject\app\routes.py", line 168, in explore
-    posts = Post.query.order_by(Post.timestamp.desc()).paginate(
-TypeError: Query.paginate() takes 1 positional argument but 4 were given
-2024-01-15 17:21:20,249 ERROR: Exception on /index [GET] [in C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py:825]
-Traceback (most recent call last):
-  File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py", line 1455, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py", line 869, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py", line 867, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py", line 852, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "C:\Users\user\PycharmProjects\MyFlaskProject\app\routes.py", line 38, in index
-    posts = current_user.followed_posts().paginate(
-TypeError: Query.paginate() takes 1 positional argument but 4 were given
-2024-01-15 17:26:53,062 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\app\__init__.py:44]
-2024-01-16 14:34:25,530 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\app\__init__.py:48]
-2024-01-16 15:06:15,394 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\app\__init__.py:48]
-2024-01-16 15:08:46,436 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\app\__init__.py:48]
-2024-01-16 15:34:00,311 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\app\__init__.py:48]
-2024-01-16 15:34:15,432 ERROR: Exception on /user/oly [GET] [in C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py:825]
-Traceback (most recent call last):
-  File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py", line 1455, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py", line 869, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py", line 867, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py", line 852, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "C:\Users\user\PycharmProjects\MyFlaskProject\app\routes.py", line 107, in user
+  File "C:\Users\user\PycharmProjects\MyFlaskProject\FlaskBlog\ChangeProject\app\main\routes.py", line 67, in user
     return render_template('user.html', user=user, posts=posts.items,
   File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\templating.py", line 152, in render_template
     return _render(app, template, context)
@@ -101,12 +58,29 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "C:\Users\user\PycharmProjects\MyFlaskProject\app\templates\user.html", line 1, in top-level template code
+  File "C:\Users\user\PycharmProjects\MyFlaskProject\FlaskBlog\ChangeProject\app\templates\user.html", line 1, in top-level template code
     {% extends "base.html" %}
-  File "C:\Users\user\PycharmProjects\MyFlaskProject\app\templates\base.html", line 57, in top-level template code
+  File "C:\Users\user\PycharmProjects\MyFlaskProject\FlaskBlog\ChangeProject\app\templates\base.html", line 94, in top-level template code
     {% block content %}{% endblock %}
-  File "C:\Users\user\PycharmProjects\MyFlaskProject\app\templates\user.html", line 11, in block 'content'
-    <p>{{ user.followers_count() }} followers, {{ user.following_count() }} following.</p>
+  File "C:\Users\user\PycharmProjects\MyFlaskProject\FlaskBlog\ChangeProject\app\templates\user.html", line 28, in block 'content'
+    {{ _('Export your posts') }}
   File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\jinja2\utils.py", line 83, in from_obj
     if hasattr(obj, "jinja_pass_arg"):
-jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'followers_count'
+jinja2.exceptions.UndefinedError: '_' is undefined
+2024-01-25 18:31:17,668 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\FlaskBlog\ChangeProject\app\__init__.py:77]
+2024-02-01 12:00:03,842 INFO: Microblog startup [in C:\Users\user\PycharmProjects\MyFlaskProject\FlaskBlog\ChangeProject\app\__init__.py:80]
+2024-02-01 12:00:30,050 ERROR: Exception on /api/users/1 [GET] [in C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py:825]
+Traceback (most recent call last):
+  File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\PycharmProjects\MyFlaskProject\venv\lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\PycharmProjects\MyFlaskProject\FlaskBlog\ChangeProject\app\api\users.py", line 8, in get_user
+    return db.get_or_404(User, id).to_dict()
+  File "C:\Users\user\PycharmProjects\MyFlaskProject\FlaskBlog\ChangeProject\app\models.py", line 204, in to_dict
+    'last_seen': self.last_seen.replace(
+AttributeError: 'NoneType' object has no attribute 'replace'

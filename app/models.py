@@ -6,6 +6,7 @@ from hashlib import md5
 from time import time
 import jwt
 import sqlalchemy as sa
+import sqlalchemy.orm as so
 
 followers = db.Table('followers',
     db.Column('follower_id', db.Integer, db.ForeignKey('user.id')),

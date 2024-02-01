@@ -1,4 +1,4 @@
-from FlaskBlog.app import app, db
+from FlaskBlog.app import app, db, cli
 from FlaskBlog.app.models import User, Post
 
 
